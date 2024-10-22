@@ -1,4 +1,4 @@
-# ReaPack Repository Template
+# Fuse's ReaPack Repository
 
 A template for GitHub-hosted ReaPack repositories with automated
 [reapack-index](https://github.com/cfillion/reapack-index)
