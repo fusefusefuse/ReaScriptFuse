@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Fuse ReaPack Repository" commit="53a86b2546f1b10ff21122cbc36c340964c50be5">
+<index version="1" name="Fuse ReaPack Repository" commit="36a6c5fcb1e09cb06f9c3dbf860cec940a8bf5ee">
   <category name="Tracks">
+    <reapack name="fuse_Solo all tracks.lua" type="script" desc="Solo All Tracks">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 This is a small script for soloing/unsoloing in toggle mode all tracks.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="fuse" time="2024-10-23T10:32:17Z">
+        <source main="main">https://github.com/fusefusefuse/ReaScriptFuse/raw/36a6c5fcb1e09cb06f9c3dbf860cec940a8bf5ee/Tracks/fuse_Solo%20all%20tracks.lua</source>
+      </version>
+    </reapack>
     <reapack name="fuse_Solo toggle selected tracks.lua" type="script" desc="Solo Selected Tracks">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
