@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Fuse ReaPack Repository" commit="36a6c5fcb1e09cb06f9c3dbf860cec940a8bf5ee">
+<index version="1" name="Fuse ReaPack Repository" commit="883c9f8946710bf93ce083451d1b2f6d0122db05">
+  <category name="Fades">
+    <reapack name="fuse_FadeIn &amp; Fade Out Mutliple Items.lua" type="script" desc="Solo All Tracks">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 This is a small script to add fade-in and fade-out to selected items.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="fuse" time="2025-12-18T16:52:25Z">
+        <source main="main">https://github.com/fusefusefuse/ReaScriptFuse/raw/a5c51c6817828eab7b274e44a0af3579acfd58d6/Fades/fuse_FadeIn%20&amp;%20Fade%20Out%20Mutliple%20Items.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Realign">
+    <reapack name="fuse_Realign Group Items.lua" type="script" desc="Solo Selected Tracks">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 This is a small script for make group items realign, use for making soundbank.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.1" author="fuse" time="2025-12-19T08:56:55Z">
+        <source main="main">https://github.com/fusefusefuse/ReaScriptFuse/raw/883c9f8946710bf93ce083451d1b2f6d0122db05/Realign/fuse_Realign%20Group%20Items.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Tracks">
     <reapack name="fuse_Solo all tracks.lua" type="script" desc="Solo All Tracks">
       <metadata>
@@ -31,11 +63,11 @@
     </reapack>
   </category>
   <metadata>
-    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Fuse's ReaPack Repository\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Fuse's ReaPack Repository\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 A template for GitHub-hosted ReaPack repositories with automated {\field{\*\fldinst{HYPERLINK "https://github.com/cfillion/reapack-index"}}{\fldrslt{\ul
 reapack-index
 }}}
