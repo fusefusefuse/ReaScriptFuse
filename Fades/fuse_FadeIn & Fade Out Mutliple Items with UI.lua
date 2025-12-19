@@ -2,7 +2,7 @@
 -- @author fuse
 -- @version 1.0
 -- @about 
---   This is a small script to add fade-in and fade-out to selected items.
+-- Add fade-in and fade-out to selected items with User Interface 
 
 -- Fuse Script  /  Tested only on windows.
 --=======================================================================================
@@ -16,10 +16,25 @@
 --=======================================================================================]]
 
 --------------------------------
--- PARAMÈTRES UTILISATEUR
+-- INTERFACE UTILISATEUR --
 --------------------------------
-fade_in_len = 0.02 -- durée du fade-in en secondes
-fade_out_len = 0.05 -- durée du fade-out en secondes
+local retval, inputs = reaper.GetUserInputs(
+"Ajouter des fades",
+2,
+"Fade-in (secondes),Fade-out (secondes)",
+"0.02,0.05"
+)
+
+if not retval then return end
+
+local fade_in_len, fade_out_len = inputs:match("([^,]+),([^,]+)")
+fade_in_len = tonumber(fade_in_len)
+fade_out_len = tonumber(fade_out_len)
+
+if not fade_in_len or not fade_out_len then
+reaper.ShowMessageBox("Valeurs invalides", "Erreur", 0)
+return
+end
 --------------------------------
 
 reaper.Undo_BeginBlock()
@@ -33,17 +48,20 @@ else
 	for i = 0, item_count - 1 do
 		local item = reaper.GetSelectedMediaItem(0, i)
 		if item then
-			local length = reaper.GetMediaItemInfo_Value(item, "D_LENGTH")
+		local length = reaper.GetMediaItemInfo_Value(item, "D_LENGTH")
 
-			-- Sécurité : éviter un fade plus long que l'item
-			local fi = math.min(fade_in_len, length / 2)
-			local fo = math.min(fade_out_len, length / 2)
 
-			reaper.SetMediaItemInfo_Value(item, "D_FADEINLEN", fi)
-			reaper.SetMediaItemInfo_Value(item, "D_FADEOUTLEN", fo)
+		-- Sécurité : éviter un fade plus long que l'item
+		local fi = math.min(fade_in_len, length / 2)
+		local fo = math.min(fade_out_len, length / 2)
+
+
+		reaper.SetMediaItemInfo_Value(item, "D_FADEINLEN", fi)
+		reaper.SetMediaItemInfo_Value(item, "D_FADEOUTLEN", fo)
 		end
 	end
 end
+
 
 reaper.PreventUIRefresh(-1)
 reaper.UpdateArrange()
